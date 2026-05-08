@@ -1,33 +1,51 @@
 # Analytical Workflow Operating System
 
-This repository is the canonical, versioned operating system for repeatable analytics + ML delivery.
+This repository defines the **canonical, versioned operating system** for repeatable analytics, ML, and AI delivery.
 
-## Where to house this folder
+It exists to ensure that every analysis:
+- Is decision‑driven
+- Uses correct and trusted data
+- Applies ML only when justified
+- Is explainable to Finance and executives
+- Can be safely operationalized and communicated
 
-Keep this workflow in a **dedicated Git repository** (this repo), separate from project-specific dbt, ML, or BI repos. Project repos should reference these standards; they should not redefine them.
+This is not a project repo.  
+It is the **standard** that all project repos reference.
 
-## Canonical modular structure
+---
 
-- `analysis/00_analysis_contract.md`
-- `analysis/01_data_landscape.md`
-- `analysis/02_data_quality.md`
-- `analysis/03_dbt_semantics.md`
-- `analysis/04_features/feature_table_design_standard.md`
-- `analysis/05_eda.md`
-- `analysis/06_model_design.md`
-- `analysis/07_validation.md`
-- `analysis/08_production_notes.md`
-- `analysis/09_exec_narrative.md`
-- `analysis/10_interpretation.md`
-- `analysis/templates/*`
+## What This Is (and Is Not)
 
-## How to use
+**This is:**
+- A step‑by‑step operating system for analytics, ML, and AI work
+- A set of explicit checklists, guardrails, and stop conditions
+- A framework for aligning business decisions, data, models, and delivery
+- Designed for **humans and AI agents** to follow consistently
 
-1. Start every request in `analysis/00_analysis_contract.md`.
-2. Execute stages `01` through `10` in order.
-3. Store run-specific artifacts under `/analysis/` using the stage templates.
-4. Treat each stage file as the source of truth for prompts, quality bars, and sign-off criteria.
+**This is not:**
+- A collection of templates to blindly fill out
+- A dbt project, ML codebase, or BI repo
+- A place for project‑specific logic or artifacts
+- A guarantee that ML is always required
 
-## Versioning
+---
 
-Track workflow changes through Git commits and tags (for example: `os-v1.0`, `os-v1.1`).
+## Where This Repository Lives
+
+This workflow should live in a **dedicated Git repository**, separate from:
+- dbt projects
+- ML / modeling repositories
+- BI / dashboard repositories
+
+Project repos should:
+- Reference this workflow
+- Conform to its stages and quality bars
+- Store run‑specific artifacts using its structure
+
+They should **not** redefine the process.
+
+---
+
+## Canonical Modular Structure
+
+Each stage represents a **conceptual gate**, not just a task.
